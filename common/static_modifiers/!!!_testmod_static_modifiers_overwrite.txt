@@ -1,0 +1,89 @@
+####################
+### HEADQUARTERS ###
+####################
+
+### HEADQUARTERS BONUS ###
+nsc_headquarters_bonus = {
+    pop_ethic_militarist_attraction_mult = 0.10
+    commander_skill_levels = 2
+    country_command_limit_add = 100
+    country_naval_cap_add = 100
+    federation_naval_cap_contribution_mult = 0.25
+}
+
+
+#ship foci - removed build cost reductions
+
+mod_light_ship_focus = {
+	show_only_custom_tooltip = yes
+	custom_tooltip = nsc_light_ship_focus_tooltip
+	shipsize_corvette_build_speed_mult = 0.2
+	shipsize_destroyer_build_speed_mult = 0.2
+	shipsize_cruiser_build_speed_mult = 0.2
+	shipsize_strikecruiser_build_speed_mult = -0.2
+	shipsize_escortcarrier_build_speed_mult = -0.2
+	shipsize_battlecruiser_build_speed_mult = -0.2
+	shipsize_battleship_build_speed_mult = -0.2
+	shipsize_carrier_build_speed_mult = -0.2
+	shipsize_dreadnought_build_speed_mult = -0.2
+	shipsize_titan_build_speed_mult = -0.2
+}
+
+mod_versatility_focus = {
+	show_only_custom_tooltip = yes
+	custom_tooltip = nsc_versatility_focus_tooltip
+	shipsize_corvette_build_speed_mult = -0.2
+	shipsize_destroyer_build_speed_mult = -0.2
+	shipsize_cruiser_build_speed_mult = 0.2
+	shipsize_strikecruiser_build_speed_mult = 0.2
+	shipsize_escortcarrier_build_speed_mult = -0.2
+	shipsize_battlecruiser_build_speed_mult = 0.2
+	shipsize_battleship_build_speed_mult = -0.2
+	shipsize_carrier_build_speed_mult = -0.2
+	shipsize_dreadnought_build_speed_mult = -0.2
+	shipsize_titan_build_speed_mult = -0.2
+}
+
+mod_capital_focus = {
+	show_only_custom_tooltip = yes
+	custom_tooltip = nsc_capital_focus_tooltip
+	shipsize_corvette_build_speed_mult = -0.2
+	shipsize_destroyer_build_speed_mult = -0.2
+	shipsize_cruiser_build_speed_mult = -0.2
+	shipsize_strikecruiser_build_speed_mult = -0.2
+	shipsize_escortcarrier_build_speed_mult = -0.2
+	shipsize_battlecruiser_build_speed_mult = -0.2
+	shipsize_battleship_build_speed_mult = 0.2
+	shipsize_carrier_build_speed_mult = 0.2
+	shipsize_dreadnought_build_speed_mult = 0.2
+	shipsize_titan_build_speed_mult = 0.2
+}
+
+mod_carrier_focus = {
+	show_only_custom_tooltip = yes
+	custom_tooltip = nsc_carrier_focus_tooltip
+	shipsize_corvette_build_speed_mult = -0.2
+	shipsize_destroyer_build_speed_mult = -0.2
+	shipsize_cruiser_build_speed_mult = -0.2
+	shipsize_strikecruiser_build_speed_mult = -0.2
+	shipsize_escortcarrier_build_speed_mult = 0.35
+	shipsize_battlecruiser_build_speed_mult = -0.2
+	shipsize_battleship_build_speed_mult = -0.2
+	shipsize_carrier_build_speed_mult = 0.35
+	shipsize_dreadnought_build_speed_mult = -0.2
+	shipsize_titan_build_speed_mult = -0.2
+}
+
+# psychic beacon traverse - nerfed from +2000% to +100%
+giga_psychic_traverse = {
+	icon = "gfx/interface/icons/modifiers/mod_black_hole.dds"
+	ship_ftl_jumpdrive_range_mult = 1
+	ship_jumpdrive_cooldown_mult = -0.25
+}
+
+#nerfs the psi range thing from 2000% (lmao) to +30%
+MOD_pse_power_combat_range_modifier = {
+	ship_weapon_range_mult = 0.3
+	ship_accuracy_add = 25
+	ship_tracking_add = 25
+}

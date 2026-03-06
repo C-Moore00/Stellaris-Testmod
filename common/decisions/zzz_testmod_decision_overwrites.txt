@@ -1,0 +1,420 @@
+osom_decision_subterranean_1 = {
+	owned_planets_only = yes
+	icon = osom_subterranean
+	sound = event_construction
+
+	enactment_time = 1800
+
+	resources = {
+		category = decisions
+		cost = {
+			influence = 25
+			energy = 1000
+		}
+	}
+	
+	allow = {
+		OR = {
+			owner = {
+				has_origin = "osom_origin_subterranean"
+			}
+			has_building = osom_building_speleology_facility_1
+			has_building = osom_building_speleology_facility_2
+			has_building = osom_building_speleology_facility_3
+		}
+	}
+
+	potential = {
+		owner = {
+			OR = {
+				has_technology = osom_tech_speleology_1
+				has_origin = "osom_origin_subterranean"
+			}
+			NAND = {
+				has_resource = { type = nanites amount >= 2500 }
+				has_technology = tech_microlite_deconstruction
+			}
+		}
+		NOR = {
+			has_planet_flag = subterranean_decision_queued
+			uses_district_set = habitat
+			uses_district_set = ring_world
+			has_modifier = osom_planet_subterranean_1
+			has_modifier = osom_planet_subterranean_2
+			has_modifier = osom_planet_subterranean_3
+			has_modifier = osom_planet_subterranean_4
+			has_modifier = osom_planet_subterranean_5
+			is_planet_class = pc_pd_gas_giant_hab
+			is_planet_class = pc_virtual_industry
+			is_planet_class = pc_virtual_reality
+			is_planet_class = pc_virtual_stellar_industry
+			is_planet_class = pc_equatorial_shipyard
+			is_planet_class = pc_habitable_gas_giant
+			is_planet_class = pc_squareworld_habitable
+			is_planet_class = pc_giga_penrose_habitable
+			is_planet_class = pc_interstellar_habitat
+			is_planet_class = pc_interstellar_ringworld_habitable
+		}
+	}
+
+	on_queued = {
+		hidden_effect = {
+			set_planet_flag = subterranean_decision_queued
+		}
+	}
+
+ 	on_unqueued = {
+		hidden_effect = {
+			remove_planet_flag = subterranean_decision_queued
+		}
+	}
+	
+	effect = {
+		add_modifier = { 
+			modifier = "osom_planet_subterranean_1" 
+			days = -1 
+		}
+		hidden_effect = {
+			remove_planet_flag = subterranean_decision_queued
+		}
+	}
+	
+	ai_weight = {
+		weight = 50
+		modifier = {
+			factor = 0
+			free_district_slots > 2
+		}
+	}
+}
+
+osom_decision_subterranean_2 = {
+	owned_planets_only = yes
+	icon = osom_subterranean
+	sound = event_construction
+
+	enactment_time = 1800
+
+	resources = {
+		category = decisions
+		cost = {
+			influence = 25
+			energy = 1000
+		}
+	}
+
+	allow = {
+		OR = {
+			has_building = osom_building_speleology_facility_1
+			has_building = osom_building_speleology_facility_2
+			has_building = osom_building_speleology_facility_3
+		}
+	}
+
+	on_queued = {
+		hidden_effect = {
+			set_planet_flag = subterranean_decision_queued
+		}
+	}
+
+ 	on_unqueued = {
+		hidden_effect = {
+			remove_planet_flag = subterranean_decision_queued
+		}
+	}
+
+	potential = {
+		owner = {
+			OR = {
+				has_technology = osom_tech_speleology_2
+				has_origin = "osom_origin_subterranean"
+			}
+			NAND = {
+				has_resource = { type = nanites amount >= 2500 }
+				has_technology = tech_microlite_deconstruction
+			}
+		}
+		has_modifier = osom_planet_subterranean_1
+		NOR = {
+			has_planet_flag = subterranean_decision_queued
+			uses_district_set = habitat
+			uses_district_set = ring_world
+			is_planet_class = pc_pd_asteroid_hab
+			is_planet_class = pc_gigaorbital_ring
+		}
+	}
+	
+	effect = {
+		add_modifier = { 
+			modifier = "osom_planet_subterranean_2" 
+			days = -1 
+		}
+		hidden_effect = {
+			remove_planet_flag = subterranean_decision_queued
+			remove_modifier = "osom_planet_subterranean_1" 
+		}
+	}
+	
+	ai_weight = {
+		weight = 50
+		modifier = {
+			factor = 0
+			free_district_slots > 2
+		}
+	}
+}
+
+osom_decision_subterranean_3 = {
+	owned_planets_only = yes
+	icon = osom_subterranean
+	sound = event_construction
+
+	enactment_time = 1800
+
+	resources = {
+		category = decisions
+		cost = {
+			influence = 25
+			energy = 1000
+			alloys = 1000
+		}
+	}
+
+	allow = {
+		OR = {
+			has_building = osom_building_speleology_facility_2
+			has_building = osom_building_speleology_facility_3
+		}
+	}
+
+	potential = {
+		owner = {
+			OR = {
+				has_technology = osom_tech_speleology_3
+				has_origin = "osom_origin_subterranean"
+			}
+			NAND = {
+				has_resource = { type = nanites amount >= 2500 }
+				has_technology = tech_microlite_deconstruction
+			}
+		}
+		has_modifier = osom_planet_subterranean_2
+		NOR = {
+			has_planet_flag = subterranean_decision_queued
+			uses_district_set = habitat
+			uses_district_set = ring_world
+			is_planet_class = pc_pd_barren_cold_hab
+			is_planet_class = pc_pd_barren_hab
+			is_planet_class = pc_pd_frozen_hab
+			is_planet_class = pc_pd_hothouse_hab
+			is_planet_class = pc_pd_molten_hab
+			is_planet_class = pc_pd_toxic_hab
+		}
+	}
+
+	on_queued = {
+		hidden_effect = {
+			set_planet_flag = subterranean_decision_queued
+		}
+	}
+
+ 	on_unqueued = {
+		hidden_effect = {
+			remove_planet_flag = subterranean_decision_queued
+		}
+	}
+	
+	effect = {
+		add_modifier = { 
+			modifier = "osom_planet_subterranean_3" 
+			days = -1 
+		}
+		hidden_effect = {
+			remove_planet_flag = subterranean_decision_queued
+			remove_modifier = "osom_planet_subterranean_2" 
+		}
+	}
+	
+	ai_weight = {
+		weight = 50
+	}
+}
+
+# Machine Factory Project
+decision_machinefactory_project = {
+	owned_planets_only = yes
+	icon = decision_machine_factory_project
+
+	enactment_time = 360
+	resources = {
+		category = decisions
+		cost = {
+			influence = 200
+			minerals = 10000
+		}
+	}
+	
+	potential = {
+		NOR = {
+			is_planet_class = pc_machine_factory
+		}
+		OR = {
+			is_planet_class = pc_machine
+			is_planet_class =  pc_machine_cave
+		}
+		is_artificial = no
+		is_pd_habitat = no
+		is_pd_planetary_megaproject = no
+		exists = owner
+		owner = { has_ascension_perk = ap_machine_worlds }
+		owner = { not = { has_civic = civic_machine_servitor } }
+	}
+	
+	allow = {
+		custom_tooltip = {
+			fail_text = decision_arcology_project_requirements
+			free_district_slots < 1
+			num_districts = { type = district_farming value < 1 }
+			num_districts = { type = district_mining value < 1 }
+			num_districts = { type = district_generator value < 1 }
+			num_districts = { type = district_farming_uncapped value < 1 }
+			num_districts = { type = district_mining_uncapped value < 1 }
+			num_districts = { type = district_generator_uncapped value < 1 }
+		}
+		num_uncleared_blockers < 1
+	}
+	
+	effect = {
+		# Make city-planet
+		custom_tooltip = decision_machine_factory_effects
+		hidden_effect = {		
+			change_pc = pc_machine_factory
+			owner = {
+				country_event = { id = distar.201 } # port for living planet distar.197, triggers in event
+			}
+			planet_event = { id = pdengine.10 }
+			planet_event = { id = pdengine.14 }
+			add_deposit = d_pd_industrial_sector
+			relic_world_conversion_effect = {
+				DISTRICT = district_mf_alloy
+				VARIABLE = num_industrial_districts
+			}
+			IF = {
+				limit = { 
+					has_deposit = d_pd_necro_arc
+				}
+				IF = { limit = { NOT = { has_deposit = d_pd_machinecap_arc } }
+				set_planet_entity = { picture = pc_machine_necropolis entity = machinenecrofactory_planet_01_entity }
+				}
+				IF = { limit = { has_deposit = d_pd_machinecap_arc }
+				set_planet_entity = { picture = pc_machine_necropolis_capital entity = machinenecrofactory_planet_01_entity }
+				}
+			}
+			IF = {
+				limit = { has_deposit = d_pd_machinecap_arc }
+				set_planet_entity = { picture = pc_machinefort_capital entity = machine_fort_planet_01_entity }
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+        modifier = {
+            factor = 100
+            exists = owner
+            num_pops >= 70
+        }
+		modifier = { 
+			factor = 0	
+			owner = { any_owned_planet = { is_planet_class = pc_machine_factory } }
+		}
+	}
+}
+
+# Machine Fort Project
+decision_machine_fort_project = {
+	owned_planets_only = yes
+	icon = decision_machine_fort_project
+
+	enactment_time = 360
+	resources = {
+		category = decisions
+		cost = {
+			influence = 200
+			minerals = 10000
+		}
+	}
+	
+	potential = {
+		NOR = {
+			is_planet_class = pc_machine_fort
+		}
+		OR = {
+			is_planet_class = pc_machine
+			is_planet_class = pc_machine_cave
+		}
+		is_artificial = no
+		is_pd_habitat = no
+		is_pd_planetary_megaproject = no
+		exists = owner
+		owner = { has_ascension_perk = ap_machine_worlds }
+		owner = { not = { has_civic = civic_machine_servitor } }
+	}
+	
+	allow = {
+		custom_tooltip = {
+			fail_text = decision_arcology_project_requirements
+			free_district_slots < 1
+			num_districts = { type = district_farming value < 1 }
+			num_districts = { type = district_mining value < 1 }
+			num_districts = { type = district_generator value < 1 }
+			num_districts = { type = district_farming_uncapped value < 1 }
+			num_districts = { type = district_mining_uncapped value < 1 }
+			num_districts = { type = district_generator_uncapped value < 1 }
+		}
+		num_uncleared_blockers < 1
+	}
+	
+	effect = {
+		# Make city-planet
+		custom_tooltip = decision_machine_fort_effects
+		hidden_effect = {		
+			change_pc = pc_machine_fort
+			owner = {
+				country_event = { id = distar.201 } # port for living planet distar.197, triggers in event
+			}
+			planet_event = { id = pdengine.10 }
+			planet_event = { id = pdengine.14 }
+			relic_world_conversion_effect = {
+				DISTRICT = district_mf_alloy
+				VARIABLE = num_industrial_districts
+			}
+			add_deposit = d_milarc
+		}
+		IF = {
+			limit = { 
+				has_deposit = d_pd_necro_arc
+			}
+			IF = { limit = { NOT = { has_deposit = d_pd_machinecap_arc } }
+			set_planet_entity = { picture = pc_machine_necrofort entity = machinenecrofort_planet_01_entity }
+			}
+			IF = { limit = { has_deposit = d_pd_machinecap_arc }
+			set_planet_entity = { picture = pc_machine_necrofort_capital entity = machinenecrofort_planet_01_entity }
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 100
+			exists = owner
+			num_pops >= 70
+			solar_system = { is_bottleneck_system = yes }
+		}
+		modifier = { 
+			factor = 0	
+			owner = { any_owned_planet = { is_planet_class = pc_machine_fort } }
+		}
+	}
+}

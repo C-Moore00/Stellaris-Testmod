@@ -1,0 +1,331 @@
+decision_remove_nonhabitable_modifiers = {
+    owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_remove_nonhabitable_modifiers
+	enactment_time = 0
+
+    resources = {
+		category = decisions
+		cost = {
+			energy = 1000
+		}
+	}
+
+    potential = {
+		OR = {
+			has_modifier = gpm_rugged_terrain
+			has_modifier = gpm_abundant_natural_radioactivity
+			has_modifier = gpm_solidified_core
+			has_modifier = gpm_very_hot_core
+			has_modifier = gpm_subterranean_eco_system
+			has_modifier = gpm_iron_planet
+			has_modifier = gpm_carbon_planet
+			has_modifier = gpm_stellar_irradiation
+			has_modifier = gpm_cryogeysers
+			has_modifier = gpm_strong_volcanism
+			has_modifier = gpm_hot_geysers
+			has_modifier = gpm_water_pockets
+			has_modifier = gpm_hydrogen_mist
+			has_modifier = gpm_hydrogen_ice
+			has_modifier = gpm_nitrogen_ice
+			has_modifier = gpm_magma_ocean
+			has_modifier = gpm_silicon_crystals
+			has_modifier = gpm_thin_planetary_crust
+			has_modifier = gpm_heavy_elements
+			has_modifier = gpm_rare_metals
+			has_modifier = gpm_heavy_elements
+			has_modifier = gpm_crystaline_deposits
+			has_modifier = gpm_heavy_elements
+			has_modifier = gpm_searing_fumes
+			has_modifier = gpm_stable_geodes
+			has_modifier = gpm_fast_rotation
+			has_modifier = gpm_lava_geysers
+			has_modifier = gpm_mercury_atmosphere
+			has_modifier = gpm_proto_planet
+			has_modifier = gpm_habitat_stadium
+			has_modifier = gpm_habitat_trade_docks
+			has_modifier = gpm_habitat_spaceroute_hub
+			has_modifier = gpm_habitat_holonet_entertainment_systems
+			has_modifier = gpm_habitat_replicator_systems
+			has_modifier = gpm_habitat_extensive_moon_mining
+			has_modifier = gpm_habitat_asteroid_belt_mining
+			has_modifier = gpm_habitat_frequent_thunderstorms_research
+			has_modifier = gpm_habitat_radioactive_mantle_mining
+			has_modifier = gpm_habitat_frequent_asteroid_flybys
+			has_modifier = gpm_habitat_highly_charged_particle_collection
+			has_modifier = gpm_habitat_ancient_temple_expeditions
+			has_modifier = gpm_habitat_experimental_food_recycling
+			has_modifier = gpm_habitat_time_displaced_planet_research
+			has_modifier = gpm_habitat_surface_mining
+			has_modifier = gpm_habitat_surface_expeditions
+			has_modifier = gpm_habitat_android_pleasure_palace_tourism
+			has_modifier = gpm_habitat_delicious_ingredients_trade
+			has_modifier = gpm_habitat_android_pleasure_palace_tourism
+			has_modifier = gpm_habitat_flat_terrain_racing
+			has_modifier = gpm_habitat_strange_alien_eggs_restriction
+			has_modifier = gpm_habitat_hydrogen_extraction
+			has_modifier = gpm_habitat_nitrogen_extraction
+			has_modifier = gpm_habitat_chlorine_extraction
+			has_modifier = gpm_habitat_phosphorus_extraction
+			has_modifier = gpm_habitat_sulfur_extraction
+			has_modifier = gpm_habitat_iron_extraction
+			has_modifier = pdhabvolcanicminerals
+			has_modifier = gpm_carbon_planet
+			has_modifier = pm_new_frontier
+			has_modifier = gpm_ocean_forests
+			has_modifier = gpm_never_ending_aurora
+			has_modifier = lifeless_temperate
+			has_modifier = gpm_terraforming_world_engineering_mastery
+			has_modifier = gpm_terraforming_world_engineering_shaper_mastery
+			has_modifier = gpm_terraforming_world_engineering
+			has_modifier = celestial_tear_modifier
+		}
+	gpm_is_planet_class_habitat = no
+	}
+
+	effect = {
+		custom_tooltip = "decision_clear_planet_mod_effect"
+		hidden_effect = {
+			remove_modifier = gpm_abundant_natural_radioactivity
+			remove_modifier = gpm_rugged_terrain
+			remove_modifier = gpm_solidified_core
+			remove_modifier = gpm_very_hot_core
+			remove_modifier = gpm_subterranean_eco_system
+			remove_modifier = gpm_iron_planet
+			remove_modifier = gpm_carbon_planet
+			remove_modifier = gpm_stellar_irradiation
+			remove_modifier = gpm_cryogeysers
+			remove_modifier = gpm_strong_volcanism
+			remove_modifier = gpm_hot_geysers
+			remove_modifier = gpm_water_pockets
+			remove_modifier = gpm_hydrogen_mist
+			remove_modifier = gpm_hydrogen_ice
+			remove_modifier = gpm_nitrogen_ice
+			remove_modifier = gpm_magma_ocean
+			remove_modifier = gpm_silicon_crystals
+			remove_modifier = gpm_thin_planetary_crust
+			remove_modifier = gpm_heavy_elements
+			remove_modifier = gpm_rare_metals
+			remove_modifier = gpm_heavy_elements
+			remove_modifier = gpm_crystaline_deposits
+			remove_modifier = gpm_heavy_elements
+			remove_modifier = gpm_searing_fumes
+			remove_modifier = gpm_stable_geodes
+			remove_modifier = gpm_fast_rotation
+			remove_modifier = gpm_lava_geysers
+			remove_modifier = gpm_mercury_atmosphere
+			remove_modifier = gpm_proto_planet
+			remove_modifier = gpm_habitat_stadium
+			remove_modifier = gpm_habitat_trade_docks
+			remove_modifier = gpm_habitat_spaceroute_hub
+			remove_modifier = gpm_habitat_holonet_entertainment_systems
+			remove_modifier = gpm_habitat_replicator_systems
+			remove_modifier = gpm_habitat_extensive_moon_mining
+			remove_modifier = gpm_habitat_asteroid_belt_mining
+			remove_modifier = gpm_habitat_frequent_thunderstorms_research
+			remove_modifier = gpm_habitat_radioactive_mantle_mining
+			remove_modifier = gpm_habitat_frequent_asteroid_flybys
+			remove_modifier = gpm_habitat_highly_charged_particle_collection
+			remove_modifier = gpm_habitat_ancient_temple_expeditions
+			remove_modifier = gpm_habitat_experimental_food_recycling
+			remove_modifier = gpm_habitat_time_displaced_planet_research
+			remove_modifier = gpm_habitat_surface_mining
+			remove_modifier = gpm_habitat_surface_expeditions
+			remove_modifier = gpm_habitat_android_pleasure_palace_tourism
+			remove_modifier = gpm_habitat_delicious_ingredients_trade
+			remove_modifier = gpm_habitat_android_pleasure_palace_tourism
+			remove_modifier = gpm_habitat_flat_terrain_racing
+			remove_modifier = gpm_habitat_strange_alien_eggs_restriction
+			remove_modifier = gpm_habitat_hydrogen_extraction
+			remove_modifier = gpm_habitat_nitrogen_extraction
+			remove_modifier = gpm_habitat_chlorine_extraction
+			remove_modifier = gpm_habitat_phosphorus_extraction
+			remove_modifier = gpm_habitat_sulfur_extraction
+			remove_modifier = gpm_habitat_iron_extraction
+			remove_modifier = pdhabvolcanicminerals
+			remove_modifier = gpm_diamond_rain
+			remove_modifier = gpm_radioactive_biome
+			remove_modifier = gpm_decomposing_leviathan
+			remove_modifier = gpm_mushroom_forest_toxic_world
+			remove_modifier = gpm_giant_mold_blobs
+			remove_modifier = gpm_toxic_garbage
+			remove_modifier = gpm_corrosive_atmosphere
+			remove_modifier = gpm_chlorine_planet
+			remove_modifier = gpm_phosphorus_planet
+			remove_modifier = gpm_sulfur_planet
+			remove_modifier = gpm_acid_rain
+			remove_modifier = gpm_garbage_dump
+			remove_modifier = gpm_toxic_flora_fauna
+			remove_modifier = gpm_carbon_planet
+			remove_modifier = pm_new_frontier
+			remove_modifier = gpm_ocean_forests
+			remove_modifier = gpm_never_ending_aurora
+			remove_modifier = lifeless_temperate
+			remove_modifier = gpm_terraforming_world_engineering_mastery
+			remove_modifier = gpm_terraforming_world_engineering_shaper_mastery
+			remove_modifier = gpm_terraforming_world_engineering
+			remove_modifier = celestial_tear_modifier
+		}
+	}
+    
+	
+	ai_weight = {
+		weight = 1000
+	}
+}
+
+decision_fix_ignited_world = {
+    owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_fix_ignited_world
+	enactment_time = 0
+
+    resources = {
+		category = decisions
+		cost = {
+			energy = 500
+		}
+
+	}
+
+    potential = {
+		OR = {
+			has_building = building_hab_major_capital
+			has_building = building_hab_capital
+		}
+		gpm_is_planet_class_habitat = no
+	}
+	
+	allow = {
+		OR = {
+			has_building = building_hab_major_capital
+			has_building = building_hab_capital
+		}
+	}
+
+    effect = {
+		add_building = building_colony_shelter
+	}
+	
+	ai_weight = {
+		weight = 1000
+	}
+}
+
+# Remove orbital arcology
+decision_remove_orbital_arcology = {
+	owned_planets_only = yes
+	sound = event_construction
+	icon = decision_remove_orbital_arcology
+	prerequisites = { "giga_tech_orbital_arcologies" }
+	ai_weight = {
+		weight = 0
+	}
+
+	potential = {
+		exists = owner
+		or = {
+			is_artificial = no
+			has_planet_flag = giga_planet_mega
+		}
+		has_planet_flag = orbital_arcology
+		solar_system = {
+			any_system_megastructure = {
+				or = {
+					is_megastructure_type = orbital_arcology_3
+					is_megastructure_type = orbital_arcology_2
+					is_megastructure_type = orbital_arcology_1
+				}
+				planet = { is_same_value = ROOT }
+				is_upgrading = no
+			}
+		}
+		NOT = {
+			has_global_flag = orbital_arcologies_disabled
+		}
+	}
+	
+	allow = {
+		has_fully_upgraded_capital = yes
+	}
+
+	resources = {
+		category = giga_megastructures
+		cost = {
+			energy = 500
+			multiplier = trigger:planet_size
+		}
+	}
+
+	effect = {
+		hidden_effect = {
+			solar_system = {
+				random_system_megastructure = {
+					limit = {
+						or = {
+							is_megastructure_type = orbital_arcology_3
+							is_megastructure_type = orbital_arcology_2
+							is_megastructure_type = orbital_arcology_1
+						}
+						planet = { is_same_value = ROOT } 
+					}
+					remove_megastructure = this
+				}
+			}
+			remove_planet_flag = orbital_arcology_1
+			remove_planet_flag = orbital_arcology_2
+			remove_planet_flag = orbital_arcology_3
+			giga_clear_orbital_arcology_modifiers = yes
+			remove_modifier = new_orbital_arcology_triple_modifier
+			remove_planet_flag = orbital_arcology
+			add_planet_devestation = 20
+		}
+	}
+	enactment_time = 120
+}
+
+# Clear megastructure
+decision_remove_megastructure = {
+	owned_planets_only = yes
+	sound = event_construction
+	icon = decision_remove_megastructure
+	prerequisites = { "tech_mega_engineering" }
+	ai_weight = {
+		weight = 0
+	}
+
+	potential = {
+		exists = owner
+		or = {
+			is_artificial = no
+			has_planet_flag = has_megastructure
+		}
+		solar_system = {
+			any_system_megastructure = {
+				planet = { is_same_value = ROOT }
+			}
+		}
+	}
+
+	resources = {
+		category = giga_megastructures
+		cost = {
+			energy = 50000
+		}
+	}
+
+	effect = {
+		hidden_effect = {
+			solar_system = {
+				random_system_megastructure = {
+					limit = {
+						planet = { is_same_value = ROOT } 
+					}
+					remove_megastructure = this
+				}
+			}
+			remove_planet_flag = has_megastructure
+		}
+	}
+	enactment_time = 120
+}

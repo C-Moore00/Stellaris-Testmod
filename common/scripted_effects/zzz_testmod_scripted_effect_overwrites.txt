@@ -1,0 +1,365 @@
+gpm_spawn_machine_world_science_modifier = {
+	locked_random_list = {
+		10 = {
+			add_modifier = { days = -1 modifier = gpm_living_knowledge_base }
+			modifier = { factor = 0 has_modifier = gpm_living_knowledge_base }
+			modifier = { factor = 0 exists = owner owner = { NOT = { has_civic = civic_machine_assimilator } } }
+		}
+		10 = {
+			add_modifier = { days = -1 modifier = gpm_planetary_databases }
+			modifier = { factor = 0 has_modifier = gpm_planetary_databases }
+		}
+	}
+}
+
+mem_vazurans_planet_raiding_effect_1 = {
+	IF = {
+		limit = {
+			is_star = no
+		}
+		save_event_target_as = mem_vazurans_raid_planet_name
+		set_timed_planet_flag = {
+			flag = mem_vazurans_raided_planet
+			days = 27000 # 75 years
+		}
+		if = {
+			limit = {
+				habitable_structure = yes
+			}
+			add_deposit = d_mem_vazuran_ruined_section
+		}
+		else = {
+			add_deposit = d_mem_vazuran_bomb_crater
+		}
+		IF = {
+			limit = {
+				OR = {
+					has_building = building_planetary_shield_generator
+					has_building = building_mem_planetary_shield_generator
+					has_building = building_mem_planetary_shield_generator_heavy
+					has_building = building_mem_planetary_shield_generator_orila
+				}
+			}
+			IF = {
+				limit = {
+					has_global_flag = galactic_focus_crisis_vazurans_1
+					owner = {
+						is_galactic_community_member = yes
+					}
+				}
+				add_planet_devastation = 20
+				IF = {
+					limit = {
+						num_pops > 10
+					}
+					while = {
+						count = 4
+						random_owned_pop = {
+							kill_pop = yes
+						}
+						mem_vazuran_menace_pop_killcounter = yes
+					}
+				}
+			}
+			else = {
+				add_planet_devastation = 25
+				IF = {
+					limit = {
+						num_pops > 10
+					}
+					while = {
+						count = 5
+						random_owned_pop = {
+							kill_pop = yes
+						}
+						mem_vazuran_menace_pop_killcounter = yes
+					}
+				}
+			}
+		}
+		ELSE = {
+			IF = {
+				limit = {
+					has_global_flag = galactic_focus_crisis_vazurans_1
+					owner = {
+						is_galactic_community_member = yes
+					}
+				}
+				add_planet_devastation = 40
+				IF = {
+					limit = {
+						num_pops > 70
+					}
+					while = {
+						count = 4
+						random_owned_pop = {
+							kill_pop = yes
+						}
+						mem_vazuran_menace_pop_killcounter = yes
+					}
+				}
+				IF = {
+					limit = {
+						num_pops > 20
+					}
+					while = {
+						count = 4
+						random_owned_pop = {
+							kill_pop = yes
+						}
+						mem_vazuran_menace_pop_killcounter = yes
+					}
+				}
+				IF = {
+					limit = {
+						num_pops > 10
+					}
+					while = {
+						count = 4
+						random_owned_pop = {
+							kill_pop = yes
+						}
+						mem_vazuran_menace_pop_killcounter = yes
+					}
+				}
+			}
+			else = {
+				add_planet_devastation = 50
+				IF = {
+					limit = {
+						num_pops > 70
+					}
+					while = {
+						count = 5
+						random_owned_pop = {
+							kill_pop = yes
+						}
+						mem_vazuran_menace_pop_killcounter = yes
+					}
+				}
+				IF = {
+					limit = {
+						num_pops > 20
+					}
+					while = {
+						count = 5
+						random_owned_pop = {
+							kill_pop = yes
+						}
+						mem_vazuran_menace_pop_killcounter = yes
+					}
+				}
+				IF = {
+					limit = {
+						num_pops > 10
+					}
+					while = {
+						count = 5
+						random_owned_pop = {
+							kill_pop = yes
+						}
+						mem_vazuran_menace_pop_killcounter = yes
+					}
+				}
+			}
+		}
+	}	
+}
+
+mem_vazurans_planet_retaliation_effect = {
+#	add_modifier = {
+#		modifier = mem_vazurans_raided
+#		days = 3600
+#	}
+	set_timed_planet_flag = {
+		flag = mem_vazurans_raided_planet
+		days = 27000 # 75 years
+	}
+	IF = {
+		limit = {
+			NOR = {
+				has_building = building_planetary_shield_generator
+				has_building = building_mem_planetary_shield_generator
+				has_building = building_mem_planetary_shield_generator_heavy
+				has_building = building_mem_planetary_shield_generator_orila
+			}
+		}
+		if = {
+			limit = {
+				habitable_structure = yes
+			}
+			add_deposit = d_mem_vazuran_ruined_section
+			add_deposit = d_mem_vazuran_ruined_section
+			add_deposit = d_mem_vazuran_ruined_section
+			add_deposit = d_mem_vazuran_ruined_section
+		}
+		else = {
+			add_deposit = d_mem_vazuran_bomb_crater
+			add_deposit = d_mem_vazuran_bomb_crater
+			add_deposit = d_city_ruins
+			add_deposit = d_city_ruins
+		}
+	}
+	ELSE = {
+		if = {
+			limit = {
+				habitable_structure = yes
+			}
+			add_deposit = d_mem_vazuran_ruined_section
+			add_deposit = d_mem_vazuran_ruined_section
+		}
+		else = {
+			add_deposit = d_mem_vazuran_bomb_crater
+			add_deposit = d_city_ruins
+		}
+	}
+	
+	IF = {
+		limit = {
+			OR = {
+				has_building = building_planetary_shield_generator
+				has_building = building_mem_planetary_shield_generator
+				has_building = building_mem_planetary_shield_generator_heavy
+				has_building = building_mem_planetary_shield_generator_orila
+			}
+		}
+		IF = {
+			limit = {
+				has_global_flag = galactic_focus_crisis_vazurans_1
+				owner = {
+					is_galactic_community_member = yes
+				}
+			}
+			add_planet_devastation = 40
+			IF = {
+				limit = {
+					num_pops > 10
+				}
+				while = {
+					count = 4
+					random_owned_pop = {
+						kill_pop = yes
+					}
+					mem_vazuran_menace_pop_killcounter = yes
+				}
+			}
+		}
+		else = {
+			add_planet_devastation = 50
+			IF = {
+				limit = {
+					num_pops > 10
+				}
+				while = {
+					count = 5
+					random_owned_pop = {
+						kill_pop = yes
+					}
+					mem_vazuran_menace_pop_killcounter = yes
+				}
+			}
+		}
+	}
+	ELSE = {
+		IF = {
+			limit = {
+				has_global_flag = galactic_focus_crisis_vazurans_1
+				owner = {
+					is_galactic_community_member = yes
+				}
+			}
+			add_planet_devastation = 80
+			IF = {
+				limit = {
+					num_pops > 70
+				}
+				while = {
+					count = 4
+					random_owned_pop = {
+						kill_pop = yes
+					}
+					mem_vazuran_menace_pop_killcounter = yes
+				}
+			}
+			IF = {
+				limit = {
+					num_pops > 20
+				}
+				while = {
+					count = 4
+					random_owned_pop = {
+						kill_pop = yes
+					}
+					mem_vazuran_menace_pop_killcounter = yes
+				}
+			}
+			IF = {
+				limit = {
+					num_pops > 10
+				}
+				while = {
+					count = 4
+					random_owned_pop = {
+						kill_pop = yes
+					}
+					mem_vazuran_menace_pop_killcounter = yes
+				}
+			}
+		}
+		else = {
+			add_planet_devastation = 100
+			IF = {
+				limit = {
+					num_pops > 70
+				}
+				while = {
+					count = 5
+					random_owned_pop = {
+						kill_pop = yes
+					}
+					mem_vazuran_menace_pop_killcounter = yes
+				}
+			}
+			IF = {
+				limit = {
+					num_pops > 20
+				}
+				while = {
+					count = 5
+					random_owned_pop = {
+						kill_pop = yes
+					}
+					mem_vazuran_menace_pop_killcounter = yes
+				}
+			}
+			IF = {
+				limit = {
+					num_pops > 10
+				}
+				while = {
+					count = 5
+					random_owned_pop = {
+						kill_pop = yes
+					}
+					mem_vazuran_menace_pop_killcounter = yes
+				}
+			}
+		}
+	}
+	event_target:global_event_country = {
+		change_variable = {
+			which = mem_vazuran_menace_homeworlds_razed_variable
+			value = 1
+		}
+	}
+	every_country = {
+		limit = {
+			has_event_chain = mem_vazuran_menace_chain
+		}
+		add_event_chain_counter = {
+			event_chain = "mem_vazuran_menace_chain"
+			counter = "mem_vazuran_menace_homeworlds_razed"
+			amount = 1
+		}
+	}
+}

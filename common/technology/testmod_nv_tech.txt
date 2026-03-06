@@ -1,0 +1,34 @@
+# Null void beam Improved
+null_void_beam2 = {
+	area = physics
+	cost = @tier5cost2
+	tier = 5
+	is_rare = yes
+	category = { particles }
+	ai_update_type = military
+    prerequisites = { "null_void_beam" }
+	weight = @tier4weight1
+}
+
+# tech to make growth not awful
+tech_fae_growth = {
+	area = society
+	cost = @tier2cost1
+	category = { biology }
+	tier = 2
+	is_rare = yes
+	ai_update_type = all
+	weight = 1
+
+	potential = {
+		is_gestalt = no
+	}
+
+	modifier = {
+		job_healthcare_per_pop = 0.05
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}

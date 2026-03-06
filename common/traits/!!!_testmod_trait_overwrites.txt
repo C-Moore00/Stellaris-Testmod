@@ -1,0 +1,39 @@
+# leader stuff
+leader_trait_admiral_farsighted = {
+	inline_script = {
+		script = trait/icon_psionic
+		CLASS = commander
+		ICON = "GFX_leader_trait_oracle"
+		RARITY = common
+		COUNCIL = no
+		TIER = none
+	}
+	self_modifier = { leader_lifespan_add = 80 }
+	modifier = {
+		ship_weapon_range_mult = 0.2
+		ship_sensor_range_add = 3
+		ship_hyperlane_range_add = 3
+		ship_speed_mult = 0.3
+	}
+	leader_class = { commander }
+	initial = no
+	randomized = no
+    ai_weight = { weight = 0 }
+}
+
+leader_trait_MLT_megastructure_expert_3 = {
+	leader_trait_type = veteran
+	replace_traits = { "leader_trait_MLT_megastructure_expert_2" }
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = "GFX_leader_trait_MLT_wonderworlds"
+		RARITY = veteran
+		COUNCIL = yes
+		TIER = 3
+	}
+	councilor_modifier = {
+		megastructure_build_speed_mult = 0.15
+	}
+	leader_class = { scientist }
+}

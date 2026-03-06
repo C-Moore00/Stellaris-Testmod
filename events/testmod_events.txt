@@ -1,0 +1,15 @@
+namespace = testmod_events
+
+# on_colonized, add massive colonization speed modifier
+planet_event = {
+	id = testmod_events.002
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		add_modifier = {
+			modifier = testmod_no_recolonize
+			days = 3600
+		}
+	}
+}

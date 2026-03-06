@@ -1,0 +1,4 @@
+testmod_no_recolonize = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_landing_ship.dds"
+	planet_colony_development_speed_mult = -10
+}

@@ -1,0 +1,174 @@
+building_archipelago_foundry = {
+	can_build = yes
+	base_cap_amount = 1
+	base_buildtime = 600
+
+	category = manufacturing
+
+	building_sets = {
+		industrial
+		foundry
+	}
+
+	potential = {
+		NOT = { has_modifier = resort_colony }
+		has_modifier = pd_archipelago
+		NOT = { has_building = building_archipelago_farm }
+		NOT = { has_building_construction = building_archipelago_farm }
+		NOT = { has_building = building_archipelago_resort }
+		NOT = { has_building_construction = building_archipelago_resort }
+	}
+
+	inline_script = "buildings/pd_rare_foundry_building"
+
+	destroy_trigger = {
+		planet = { NOT = { has_modifier = pd_archipelago } }
+	}
+}
+
+building_geothermal_foundry = {
+	can_build = yes
+	base_cap_amount = 1
+	base_buildtime = 600
+
+	building_sets = {
+		industrial
+		foundry
+	}
+
+	category = manufacturing
+
+	potential = {
+		NOT = { has_modifier = resort_colony }
+		has_modifier = pd_geothermal
+		NOT = { has_building = building_geothermal_grid }
+		NOT = { has_building_construction = building_geothermal_grid }
+		NOT = { has_building = building_geothermal_lab }
+		NOT = { has_building_construction = building_geothermal_lab }
+	}
+
+	inline_script = "buildings/pd_rare_foundry_building"
+
+	destroy_trigger = {
+		planet = {
+			NOT = { has_modifier = pd_geothermal }
+		}
+	}
+}
+
+building_salt_foundry = {
+	can_build = yes
+	base_cap_amount = 1
+	base_buildtime = 600
+
+	building_sets = {
+		industrial
+		foundry
+	}
+
+	category = manufacturing
+
+	potential = {
+		NOT = { has_modifier = resort_colony }
+		has_modifier = pd_salt
+		NOT = { has_building = building_salt_mine }
+		NOT = { has_building_construction = building_salt_mine }
+		NOT = { has_building = building_salt_lab }
+		NOT = { has_building_construction = building_salt_lab }
+	}
+
+	inline_script = "buildings/pd_rare_foundry_building"
+
+	destroy_trigger = {
+		planet = { NOT = { has_modifier = pd_salt } }
+	}
+}
+
+building_primal_foundry = {
+	can_build = yes
+	base_cap_amount = 1
+	base_buildtime = 600
+
+	building_sets = {
+		industrial
+		foundry
+	}
+
+	category = manufacturing
+
+	potential = {
+		NOT = { has_modifier = resort_colony }
+		has_modifier = pd_primal
+		NOT = { has_building = building_primal_grid }
+		NOT = { has_building_construction = building_primal_grid }
+		NOT = { has_building = building_primal_mine }
+		NOT = { has_building_construction = building_primal_mine }
+	}
+
+	inline_script = "buildings/pd_rare_foundry_building"
+
+	destroy_trigger = {
+		planet = {
+			NOT = { has_modifier = pd_primal }
+		}
+	}
+}
+
+building_iceberg_foundry = {
+	can_build = yes
+	base_cap_amount = 1
+	base_buildtime = 600
+
+	building_sets = {
+		industrial
+		foundry
+	}
+
+	category = manufacturing
+
+	potential = {
+		NOT = { has_modifier = resort_colony }
+		has_modifier = pd_iceberg
+		NOT = { has_building = building_iceberg_lab }
+		NOT = { has_building_construction = building_iceberg_lab }
+		NOT = { has_building = building_iceberg_farm }
+		NOT = { has_building_construction = building_iceberg_farm }
+	}
+
+	inline_script = "buildings/pd_rare_foundry_building"
+
+	destroy_trigger = {
+		planet = {
+			NOT = { has_modifier = pd_iceberg }
+		}
+	}
+}
+
+building_glacio_foundry = {
+	can_build = yes
+	base_cap_amount = 1
+	base_buildtime = 600
+
+	building_sets = {
+		industrial
+		foundry
+	}
+
+	category = manufacturing
+
+	potential = {
+		NOT = { has_modifier = resort_colony }
+		has_modifier = pd_glaciovolcanic
+		NOT = { has_building = building_glacio_resort }
+		NOT = { has_building_construction = building_glacio_resort }
+		NOT = { has_building = building_glacio_mine }
+		NOT = { has_building_construction = building_glacio_mine }
+	}
+	inline_script = "buildings/pd_rare_foundry_building"
+
+	destroy_trigger = {
+		planet = {
+			NOT = { has_modifier = pd_glaciovolcanic }
+		}
+	}
+}
