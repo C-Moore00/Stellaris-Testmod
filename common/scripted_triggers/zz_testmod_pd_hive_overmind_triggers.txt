@@ -1,0 +1,24 @@
+testmod_is_pd_hive_overmind_world = {
+	OR = {
+		is_planet_class = pc_pd_hive
+		is_planet_class = pc_pd_hive_superhabitable_arc
+		is_planet_class = pc_pd_hive_tidally_locked_arc
+		is_planet_class = pc_pd_hive_cave_arc
+	}
+}
+
+testmod_is_pd_hive_overmind_fortress_world = {
+	OR = {
+		AND = {
+			uses_district_set = city_world
+			is_pd_fortress_arcology = yes
+		}
+		AND = {
+			uses_district_set = pd_hive_world
+			OR = {
+				has_modifier = pd_hive_military
+				testmod_is_pd_hive_overmind_world = yes
+			}
+		}
+	}
+}

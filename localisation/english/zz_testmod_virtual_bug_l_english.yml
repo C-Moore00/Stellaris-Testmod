@@ -1,0 +1,3 @@
+l_english:
+ decision_testmod_repair_virtual_district_leak:0 "Repair Virtual District Leak"
+ decision_testmod_repair_virtual_district_leak_desc:0 "Remove leaked virtual districts from this non-virtual world and force the planet to rebuild its valid district and building state."

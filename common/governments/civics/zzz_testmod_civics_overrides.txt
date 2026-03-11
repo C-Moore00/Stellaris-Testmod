@@ -100,7 +100,6 @@ civic_machine_ota_updates = {
 		empire_size_pops_mult = -0.10
 		planet_resettlement_unemployed_mult = 0.5
 		country_edict_fund_add = 25
-		add_attunement_the_composer_of_strands = @civic_attunement1
 	}
 }
 

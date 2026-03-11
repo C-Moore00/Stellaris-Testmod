@@ -8,7 +8,7 @@ councilor_civic_corporate_engineering_cult = {
 	}
 	civic = civic_corporate_engineering_cult
 	modifier = {
-		planet_bureaucrats_engineering_research_produces_add = 0.1
+		planet_priests_engineering_research_produces_add = 0.1
 	}
 }
 councilor_civic_corporate_nihilism = {
@@ -21,7 +21,7 @@ councilor_civic_corporate_nihilism = {
 	}
 	civic = civic_corporate_nihilism
 	modifier = {
-		planet_bureaucrats_physics_research_produces_add = 0.1
+		planet_priests_physics_research_produces_add = 0.1
 	}
 }
 councilor_civic_physics_cult = {
@@ -35,7 +35,7 @@ councilor_civic_physics_cult = {
 	}
 	civic = civic_physics_cult
 	modifier = {
-		planet_bureaucrats_physics_research_produces_add = 0.1
+		planet_priests_physics_research_produces_add = 0.1
 	}
 }
 councilor_civic_engineering_cult = {
@@ -49,6 +49,6 @@ councilor_civic_engineering_cult = {
 	}
 	civic = civic_engineering_cult
 	modifier = {
-		planet_bureaucrats_engineering_research_produces_add = 0.1
+		planet_priests_engineering_research_produces_add = 0.1
 	}
 }

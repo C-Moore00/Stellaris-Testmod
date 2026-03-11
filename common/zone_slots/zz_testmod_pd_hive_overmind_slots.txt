@@ -1,0 +1,12 @@
+slot_hive = {
+	included_zone_sets = {
+		hive
+	}
+
+	unlock = {
+		OR = {
+			uses_district_set = hive_world
+			uses_district_set = pd_hive_world
+		}
+	}
+}

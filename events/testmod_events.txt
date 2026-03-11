@@ -13,3 +13,34 @@ planet_event = {
 		}
 	}
 }
+
+namespace = system_state
+
+country_event = {
+	id = system_state.10
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = { has_origin = origin_system_state }
+
+	immediate = {
+		if = {
+			limit = { NOT = { has_technology = tech_terrestrial_sculpting } }
+			give_technology = { tech = tech_terrestrial_sculpting message = no }
+		}
+		if = {
+			limit = {
+				NOT = { has_technology = tech_ecological_adaptation }
+				NOT = { has_tech_option = tech_ecological_adaptation }
+			}
+			add_research_option = tech_ecological_adaptation
+		}
+		if = {
+			limit = {
+				NOT = { has_technology = tech_climate_restoration }
+				NOT = { has_tech_option = tech_climate_restoration }
+			}
+			add_research_option = tech_climate_restoration
+		}
+	}
+}

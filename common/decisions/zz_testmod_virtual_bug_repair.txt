@@ -1,0 +1,128 @@
+decision_testmod_repair_virtual_district_leak = {
+	owned_planets_only = yes
+	icon = decision_terraform
+	enactment_time = 0
+
+	resources = {
+		category = decisions
+		cost = {
+		}
+	}
+
+	potential = {
+		exists = owner
+		OR = {
+			AND = {
+				has_district = xvcv_mdlc_pc_virtual_district_primary
+				NAND = {
+					owner = { has_ascension_perk = xvcv_mdlc_ap_virtual_worlds }
+					is_xvcv_mdlc_pc_virtual = yes
+					uses_district_set = xvcv_mdlc_pc_virtual_district_set
+				}
+			}
+			AND = {
+				testmod_is_pd_hive_overmind_world = yes
+				OR = {
+					has_district = district_pd_fortress_arcology_housing
+					has_district = district_pd_fortress_arcology_urban_1
+					has_district = district_pd_fortress_arcology_urban_2
+					has_district = district_pd_fortress_arcology_urban_3
+				}
+			}
+			AND = {
+				testmod_is_pd_hive_overmind_world = yes
+				OR = {
+					has_district = district_hive_1
+					has_district = district_hive_2
+					has_district = district_hive_3
+				}
+			}
+		}
+	}
+
+	allow = {
+		always = yes
+	}
+
+	effect = {
+		while = {
+			limit = {
+				has_district = xvcv_mdlc_pc_virtual_district_primary
+			}
+			remove_district = xvcv_mdlc_pc_virtual_district_primary
+		}
+		while = {
+			limit = {
+				testmod_is_pd_hive_overmind_world = yes
+				has_district = district_pd_fortress_arcology_housing
+			}
+			remove_district = district_pd_fortress_arcology_housing
+			add_district = district_hive
+		}
+		while = {
+			limit = {
+				testmod_is_pd_hive_overmind_world = yes
+				has_district = district_pd_fortress_arcology_urban_1
+			}
+			remove_district = district_pd_fortress_arcology_urban_1
+			add_district = district_hive
+		}
+		while = {
+			limit = {
+				testmod_is_pd_hive_overmind_world = yes
+				has_district = district_pd_fortress_arcology_urban_2
+			}
+			remove_district = district_pd_fortress_arcology_urban_2
+			add_district = district_hive
+		}
+		while = {
+			limit = {
+				testmod_is_pd_hive_overmind_world = yes
+				has_district = district_pd_fortress_arcology_urban_3
+			}
+			remove_district = district_pd_fortress_arcology_urban_3
+			add_district = district_hive
+		}
+		if = {
+			limit = {
+				testmod_is_pd_hive_overmind_world = yes
+				has_district = district_hive_1
+			}
+			remove_district = district_hive_1
+			add_district = district_hive_1
+		}
+		if = {
+			limit = {
+				testmod_is_pd_hive_overmind_world = yes
+				has_district = district_hive_2
+			}
+			remove_district = district_hive_2
+			add_district = district_hive_2
+		}
+		if = {
+			limit = {
+				testmod_is_pd_hive_overmind_world = yes
+				has_district = district_hive_3
+			}
+			remove_district = district_hive_3
+			add_district = district_hive_3
+		}
+		if = {
+			limit = {
+				OR = {
+					is_planet_class = pc_pd_hive
+					is_planet_class = pc_pd_hive_superhabitable_arc
+					is_planet_class = pc_pd_hive_tidally_locked_arc
+					is_planet_class = pc_pd_hive_cave_arc
+				}
+				NOT = { has_district = district_hive }
+			}
+			add_district = district_hive
+		}
+		validate_planet_buildings_and_districts = yes
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}

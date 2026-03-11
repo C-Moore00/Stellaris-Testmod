@@ -1,0 +1,13 @@
+triggered_district_planet_modifier = {
+	potential = {
+		uses_district_set = pd_hive_world
+	}
+	planet_housing_add = @zone_ring_world_housing_negative
+}
+
+triggered_district_planet_modifier = {
+	potential = {
+		NOT = { uses_district_set = pd_hive_world }
+	}
+	planet_housing_add = @zone_arcology_housing_negative
+}

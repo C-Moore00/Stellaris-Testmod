@@ -11,12 +11,14 @@ NGameplay = {
 	# invasion overwrites
 	LEADER_GENERAL_GROUND_COMBAT_BASE_EXPERIENCE				= 200 # Leader General base experience from ground combat
 	LEADER_GENERAL_GROUND_COMBAT_EXPERIENCE_SCALE				= 3.0 # Scale factor used when calculating experience gain for General
-	LEADER_GENERAL_GROUND_COMBAT_ARMIES_KILLED_CONVERSION		= 0.5 # Scale factor for total number of armies killed after combat when calculating experience gain for General	
+	LEADER_GENERAL_GROUND_COMBAT_ARMIES_KILLED_CONVERSION		= 0.5 # Scale factor for total number of armies killed after combat when calculating experience gain for General
+	WAR_EXHAUSTION_ARMY_KILLED_MULT		  = 0.5	# Multiplier of war exhaustion gained from land battles (armies)	
 	PLANET_COMBAT_WIDTH_BASE				= 10 		# Maximum number of troops that can fight at the same time
 	GENERAL_DEATH_CHANCE					= 0.01		# Chance that general dies when an army under command is destroyed (scaled to number of armies)
+	OCCUPATION_POP_VALUE 					= 0.1	# Per pop in system
 
 	# testmod overwrites
-	MIN_TRADE_DEAL_LENGTH_YEARS				= 1	# Minimum length of a trade deal in years.
+	MIN_TRADE_DEAL_LENGTH_YEARS				= 5	# Minimum length of a trade deal in years.
 	MAX_TRADE_DEAL_LENGTH_YEARS				= 100	# Maximum length of a trade deal in years.
 	LEADER_POOL_SIZE = 3
 
@@ -40,7 +42,7 @@ NGameplay = {
 
 	# leader overwrite stuff
 	LEADER_POOL_REFRESH_TIME = 720 		# Number of days between leader pool refresh
-	LEADER_BASE_SKILL_CAP	= 10
+	LEADER_BASE_SKILL_CAP	= 15
 
 	DEFAULT_TRAIT_OPTIONS_ON_LEVEL_UP	= 10		# Default number of selectable trait options before modifiers available on level up
 	NUM_DESTINY_TRAIT_OPTIONS			= 10		# Default number of destiny traits to select from
@@ -48,5 +50,5 @@ NGameplay = {
 	LEADER_SUBCLASS_CHOICE_LEVEL = 5 	# At what level you can pick your leader subclass
 
 	MAX_BASIC_TRAITS = 5 		# How many basic traits you can have before you only get the option to level them up
-	MAX_VETERAN_TRAITS = 7 		# How many veteran traits you can have before you only get the option to level them up
+	MAX_VETERAN_TRAITS = 5 		# How many veteran traits you can have before you only get the option to level them up
 }

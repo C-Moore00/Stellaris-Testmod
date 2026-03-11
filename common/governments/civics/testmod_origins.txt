@@ -240,8 +240,34 @@ origin_ancestral_knowledge = {
 	possible = {
 		authority = { NOT = { value = auth_machine_intelligence  } }
 		ethics = { value = ethic_gestalt_consciousness }
-		species_archetype = {
-			value = FUNGOID PLANTOID
+		OR = {
+			species_archetype = { value = FUNGOID }
+			species_archetype = { value = PLANTOID }
 		}
+	}
+}
+
+origin_system_state = {
+	is_origin = yes
+
+	icon = "gfx/interface/icons/origins/origins_default.dds"
+	picture = GFX_evt_metropolis
+	description = "origin_system_state_effects"
+	initializers = { system_state_start }
+	preferred_planet_class_neighbor = no
+
+	potential = {
+		always = yes
+	}
+
+	modifier = {
+		empire_size_pops_mult = -0.50
+		empire_size_colonies_mult = -0.50
+		empire_size_districts_mult = -0.50
+		empire_size_systems_mult = 3.00
+	}
+
+	random_weight = {
+		base = 10
 	}
 }

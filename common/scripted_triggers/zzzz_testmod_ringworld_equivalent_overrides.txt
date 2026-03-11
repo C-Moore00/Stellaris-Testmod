@@ -1,0 +1,7 @@
+planet_is_ring_world_equivalent = {
+	OR = {
+		uses_district_set = ring_world
+		uses_district_set = maginot_ringworld_districts
+		uses_district_set = pd_hive_world
+	}
+}
