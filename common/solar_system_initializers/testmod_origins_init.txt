@@ -821,3 +821,249 @@ rock_n_stone_init = {
 		has_ring = no
 	}
 }
+
+# system state vars
+@system_state_base_moon_distance = 10
+@system_state_molten_world_min_size = 10
+@system_state_molten_world_max_size = 18
+@system_state_terraform_world_min_size = 12
+@system_state_terraform_world_max_size = 24
+@system_state_homeworld_min_size = 16
+@system_state_homeworld_max_size = 20
+@system_state_moon_min_size = 10
+@system_state_moon_max_size = 16
+@system_state_gas_giant_min_size = 24
+@system_state_gas_giant_max_size = 30
+@system_state_frozen_world_min_size = 12
+@system_state_frozen_world_max_size = 22
+
+
+system_state_start = {
+	class = "rl_starting_stars"
+	usage = origin
+
+	flags = { empire_home_system }
+
+	init_effect = {
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+		generate_home_system_resources = yes
+	}
+
+	planet = {
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = { min = 20 max = 30 }
+		has_ring = no
+	}
+
+	change_orbit = 35
+
+	planet = {
+		class = pc_molten
+		orbit_distance = 12
+		orbit_angle = 15
+		size = { min = @system_state_molten_world_min_size max = @system_state_molten_world_max_size }
+		has_ring = no
+	}
+
+	planet = {
+		class = pc_barren
+		orbit_distance = 15
+		orbit_angle = 80
+		size = { min = @system_state_terraform_world_min_size max = @system_state_terraform_world_max_size }
+		has_ring = no
+		init_effect = {
+			prevent_anomaly = yes
+			add_modifier = {
+				modifier = terraforming_candidate
+				days = -1
+			}
+		}
+	}
+
+	planet = {
+		home_planet = yes
+		class = ideal_planet_class
+		orbit_distance = 18
+		orbit_angle = { min = 140 max = 220 }
+		size = { min = @system_state_homeworld_min_size max = @system_state_homeworld_max_size }
+		deposit_blockers = none
+		modifiers = none
+
+		init_effect = {
+			generate_empire_home_planet = yes
+			prevent_anomaly = yes
+		}
+
+		change_orbit = @system_state_base_moon_distance
+
+		moon = {
+			class = pc_barren_cold
+			orbit_distance = 6
+			orbit_angle = { min = 90 max = 270 }
+			size = { min = @system_state_moon_min_size max = @system_state_moon_max_size }
+			has_ring = no
+			init_effect = {
+				prevent_anomaly = yes
+				add_modifier = {
+					modifier = terraforming_candidate
+					days = -1
+				}
+			}
+		}
+	}
+
+	planet = {
+		class = pc_gas_giant
+		orbit_distance = 20
+		orbit_angle = { min = 230 max = 310 }
+		size = { min = @system_state_gas_giant_min_size max = @system_state_gas_giant_max_size }
+		has_ring = yes
+
+		change_orbit = 14
+
+		moon = {
+			class = pc_barren
+			orbit_distance = 6
+			orbit_angle = 45
+			size = { min = @system_state_moon_min_size max = @system_state_moon_max_size }
+			has_ring = no
+			init_effect = {
+				prevent_anomaly = yes
+				add_modifier = {
+					modifier = terraforming_candidate
+					days = -1
+				}
+			}
+		}
+
+		moon = {
+			class = pc_barren_cold
+			orbit_distance = 8
+			orbit_angle = 220
+			size = { min = @system_state_moon_min_size max = @system_state_moon_max_size }
+			has_ring = no
+			init_effect = {
+				prevent_anomaly = yes
+				add_modifier = {
+					modifier = terraforming_candidate
+					days = -1
+				}
+			}
+		}
+	}
+
+	planet = {
+		class = pc_barren_cold
+		orbit_distance = 18
+		orbit_angle = { min = 20 max = 80 }
+		size = { min = @system_state_terraform_world_min_size max = @system_state_terraform_world_max_size }
+		has_ring = no
+		init_effect = {
+			prevent_anomaly = yes
+			add_modifier = {
+				modifier = terraforming_candidate
+				days = -1
+			}
+		}
+	}
+
+	planet = {
+		class = pc_barren
+		orbit_distance = 18
+		orbit_angle = { min = 260 max = 330 }
+		size = { min = @system_state_terraform_world_min_size max = @system_state_terraform_world_max_size }
+		has_ring = no
+		init_effect = {
+			prevent_anomaly = yes
+			add_modifier = {
+				modifier = terraforming_candidate
+				days = -1
+			}
+		}
+	}
+
+	planet = {
+		class = pc_gas_giant
+		orbit_distance = 22
+		orbit_angle = { min = 100 max = 170 }
+		size = { min = @system_state_gas_giant_min_size max = @system_state_gas_giant_max_size }
+		has_ring = no
+
+		change_orbit = 12
+
+		moon = {
+			class = pc_barren
+			orbit_distance = 5
+			orbit_angle = 30
+			size = { min = @system_state_moon_min_size max = @system_state_moon_max_size }
+			has_ring = no
+			init_effect = {
+				prevent_anomaly = yes
+				add_modifier = {
+					modifier = terraforming_candidate
+					days = -1
+				}
+			}
+		}
+
+		moon = {
+			class = pc_barren_cold
+			orbit_distance = 8
+			orbit_angle = 210
+			size = { min = @system_state_moon_min_size max = @system_state_moon_max_size }
+			has_ring = no
+			init_effect = {
+				prevent_anomaly = yes
+				add_modifier = {
+					modifier = terraforming_candidate
+					days = -1
+				}
+			}
+		}
+	}
+
+	planet = {
+		class = pc_frozen
+		orbit_distance = 18
+		orbit_angle = { min = 40 max = 140 }
+		size = { min = @system_state_frozen_world_min_size max = @system_state_frozen_world_max_size }
+		has_ring = no
+	}
+
+	planet = {
+		class = pc_barren_cold
+		orbit_distance = 18
+		orbit_angle = { min = 200 max = 260 }
+		size = { min = @system_state_terraform_world_min_size max = @system_state_terraform_world_max_size }
+		has_ring = no
+		init_effect = {
+			prevent_anomaly = yes
+			add_modifier = {
+				modifier = terraforming_candidate
+				days = -1
+			}
+		}
+	}
+
+	planet = {
+		class = pc_barren
+		orbit_distance = 20
+		orbit_angle = { min = 280 max = 340 }
+		size = { min = @system_state_terraform_world_min_size max = @system_state_terraform_world_max_size }
+		has_ring = no
+		init_effect = {
+			prevent_anomaly = yes
+			add_modifier = {
+				modifier = terraforming_candidate
+				days = -1
+			}
+		}
+	}
+}

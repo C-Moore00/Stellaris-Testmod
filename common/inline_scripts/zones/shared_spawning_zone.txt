@@ -1,0 +1,85 @@
+icon = GFX_district_specialization_spawning
+base_buildtime = @zone_buildtime
+potential = { # planet scope
+	OR = {
+		is_planet_class = pc_hive
+		pd_is_pd_hive_world = yes
+		is_pd_uncommon_hive = yes
+		is_pd_uncommon_hive_arc = yes
+	}
+	owner = {
+		is_hive_empire = yes
+		has_ascension_perk = ap_hive_worlds
+	}
+}
+
+unlock = { # planet scope
+	hidden_trigger = {
+		exists = owner
+		owner = {
+			is_hive_empire = yes
+		}
+	}
+	owner = {
+		has_ascension_perk = ap_hive_worlds
+	}
+}
+
+resources = {
+	category = planet_zones
+	cost = {
+		minerals = @zone_cost
+	}
+}
+
+included_building_sets = {
+	urban
+	urban_automation
+}
+
+triggered_district_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { is_hive_empire = yes }
+		planet_is_habitat_equivalent = no
+		planet_is_ecu_equivalent = no
+		planet_is_ring_world_equivalent = no
+	}
+	job_spawning_drone_add = $AMOUNT$
+}
+
+triggered_district_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { is_hive_empire = yes }
+		planet_is_habitat_equivalent = yes
+	}
+	job_spawning_drone_add = $AMOUNT$
+	mult = owner.value:hab_void_dweller_jobs
+}
+
+triggered_district_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { is_hive_empire = yes }
+		planet_is_ecu_equivalent = yes
+	}
+	job_spawning_drone_add = $AMOUNT$
+	mult = 3
+}
+
+triggered_district_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { is_hive_empire = yes }
+		planet_is_ring_world_equivalent = yes
+	}
+	job_spawning_drone_add = $AMOUNT$
+	mult = 5
+}
+
+planet_modifier = {
+	zone_building_slots_add = 3
+}
+
+ai_priority = 12

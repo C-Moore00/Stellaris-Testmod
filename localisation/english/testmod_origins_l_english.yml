@@ -49,3 +49,6 @@ origin_ancestral_knowledge:0 "Ancestral Knowledge"
 origin_ancestral_knowledge_desc:0 "This species can transfer memories through physical contact. Their collective knowledge spans as far back as the start of their civilization, many millenia ago."
 origin_tooltip_ancestral_knowledge_effects:0 "- Start with §YThe Old Growth§! deposit on homeworld, occasionaly granting a recruited leader an additional trait.\n- Starting species gets §Y$trait_gpm_forgotten_species$§!, granting additional leader level and experience gain."
 
+origin_system_state:0 "System State"
+origin_system_state_desc:0 "A civilization optimized for a tightly-controlled core system. Expansion is costly, but local planetary engineering is a solved problem."
+origin_system_state_effects:0 "Start with §YTerrestrial Sculpting§! and a custom home system containing §Y10 long-term terraforming prospects§!.\nAdditional terraforming techs are pushed into your research pool early. Empire Size from §YPops/Colonies/Districts§! is reduced, but Empire Size from §YSystems§! is greatly increased.\n§RNo nearby guaranteed habitable colony systems are generated.§!"

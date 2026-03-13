@@ -68,3 +68,6 @@ decision_remove_megastructure:0 "Remove Megastructure"
 decision_remove_megastructure_desc:0 "To develop our empire further, we can move this megastructure directly into the local sun for the cost of a lot of energy."
 
 decision_clear_planet_mod_effect:0 "With our world newly created, there are some residual effects we need to clear out before we can truly start anew. This should remove most nonhabitable modifiers from newly created worlds."
+
+decision_testmod_repair_virtual_district_leak:0 "Repair Virtual District Leak"
+decision_testmod_repair_virtual_district_leak_desc:0 "Remove leaked virtual districts from this non-virtual world and force the planet to rebuild its valid district and building state."
