@@ -711,7 +711,15 @@ ap_esap_bio_bonus = {
 		#custom_tooltip = ap_esap_bio_bonus_tooltip
 	}
 	possible = {
-		has_genetic_ascension = yes
+		custom_tooltip = {
+			fail_text = "requires_ap_engineered_evolution_or_biomorphosis_branch"
+			OR = {
+				has_ascension_perk = ap_engineered_evolution
+				has_tradition = tr_purity_finish
+				has_tradition = tr_cloning_finish
+				has_tradition = tr_mutation_finish
+			}
+		}
 	}
 	modifier = {
 		BIOLOGICAL_species_trait_picks_add = 4
@@ -1784,7 +1792,7 @@ ap_one_vision = {
 	potential = {
 		NOR = {
 			has_ascension_perk = ap_one_vision
-			is_machine_empire = yes
+			is_gestalt = yes
 		}
 	}
 
