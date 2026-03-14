@@ -1,0 +1,7 @@
+﻿l_english:
+ testmod_ring_world_1_MEGASTRUCTURE_DETAILS:1 "A §Y$pc_ringworld_habitable$§! allows for multiple planet-like zones. These plans do not destroy planets within their home system, and are instead delivered from external sources. As a result, this ringworld is very, very expensive."
+ testmod_ring_world_1_CONSTRUCTION_INFO_DELAYED:4 "A full Ring World consists of 4 Completed Ring World Sections, each equivalent to a massive Gaia world."
+ testmod_ring_world_1:0 "Safe Ring World Site"
+ testmod_ring_world_1_DESC:0 "This complex will serve as a staging ground, resource depot and living quarters for the hundreds of thousands of personnel involved in the Ring World's construction."
+ testmod_ring_world_2_intermediate:0 "Safe Ring World Frame"
+ testmod_ring_world_2_intermediate_DESC:0 "This initial skeletal frame encircles the system's sun, and serves as the platform on which we will eventually build fully habitable sections."
