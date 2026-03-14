@@ -158,6 +158,6 @@ tech_lunari_shield_power_relays = {
 	}
 
 	modifier = {
-        ship_shield_regen_add_perc = 0.25
+        ship_shield_regen_add_perc = 0.0025
     }
 }
