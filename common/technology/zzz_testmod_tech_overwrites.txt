@@ -92,3 +92,72 @@ esc_tech_gravity_manipulation = {
 		}
 	}
 }
+
+# Self-Regenerating Slime - nerfed from 50% --> 0.5%
+tech_gpm_hiveworld_discovery = {
+	area = engineering
+	cost = @tier2cost1
+	category = { materials }
+	tier = 2
+	is_rare = no
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		ship_hull_regen_add_perc = 0.005
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+
+# Wide-Channel Shield Conduits - nerfed from 25% --> 0.25%
+tech_gpm_precursor_planetary_shield_discovery_2 = {
+	area = physics
+	cost = @tier2cost1
+	category = { particles }
+	tier = 2
+	is_custom_tech_3 = yes
+	ai_update_type = all
+	weight = 1
+
+	modifier = {
+		ship_shield_regen_add_perc = 0.0025
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+}
+
+#elven shield regen - nerfed from 25% --> 0.25%
+tech_lunari_shield_power_relays = {
+	area = physics
+	cost = @tier3cost3
+	tier = 3
+	is_rare = yes
+    is_reverse_engineerable = no
+	category = { field_manipulation }
+	ai_update_type = all
+	prerequisites = { "tech_shields_4" }
+	weight = @tier3weight3
+
+	weight_modifier = {
+		modifier = {
+            factor = 0
+            NOT = {
+                any_planet_within_border = {
+                    has_planet_flag = planet_lunari_moon
+                }
+            }
+        }
+	}
+
+	ai_weight = {
+	}
+
+	modifier = {
+        ship_shield_regen_add_perc = 0.25
+    }
+}
