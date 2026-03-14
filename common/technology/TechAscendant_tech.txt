@@ -182,7 +182,7 @@ tech_voidcraft_breakthrough = {
 	weight = 1
 		
 	modifier = {
-		ship_hull_regen_add_static = 0.1
+		ship_hull_regen_add_perc = 0.0001
 	}
 
 	weight_modifier = {
