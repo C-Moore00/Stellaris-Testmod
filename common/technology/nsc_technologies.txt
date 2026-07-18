@@ -149,43 +149,43 @@ tech_Battlecruiser_1 = {
 	}
 }
 
-tech_escortcarrier_1 = {
-	cost = @tier3cost3
-	area = engineering
-	tier = 2
-	category = { voidcraft }
-	prerequisites = { "tech_cruisers" }
-	weight = @tier2weight1
+# tech_escortcarrier_1 = {
+	# cost = @tier3cost3
+	# area = engineering
+	# tier = 2
+	# category = { voidcraft }
+	# prerequisites = { "tech_cruisers" }
+	# weight = @tier2weight1
 
-	potential = {
-		country_uses_bio_ships = no
-	}
+	# potential = {
+		# country_uses_bio_ships = no
+	# }
 	
-	gateway = ship
+	# gateway = ship
 
-	prereqfor_desc = {
-		ship = {
-			title = "TECH_UNLOCK_ESCORTCARRIER_CONSTRUCTION_TITLE"
-			desc = "TECH_UNLOCK_ESCORTCARRIER_CONSTRUCTION_DESC"
-		}
-	}
+	# prereqfor_desc = {
+		# ship = {
+			# title = "TECH_UNLOCK_ESCORTCARRIER_CONSTRUCTION_TITLE"
+			# desc = "TECH_UNLOCK_ESCORTCARRIER_CONSTRUCTION_DESC"
+		# }
+	# }
 
-	modifier = {
-		command_limit_add = 10
-		country_naval_cap_add = 20
-	}
+	# modifier = {
+		# command_limit_add = 10
+		# country_naval_cap_add = 20
+	# }
 	
-	weight_modifier = {
-		modifier = {
-			factor = 10
-			any_neighbor_country = { has_technology = tech_escortcarrier_1 }
-		}
-	}
+	# weight_modifier = {
+		# modifier = {
+			# factor = 10
+			# any_neighbor_country = { has_technology = tech_escortcarrier_1 }
+		# }
+	# }
 	
-	ai_weight = {
-		factor = @ai_ship_types_factor
-	}
-}
+	# ai_weight = {
+		# factor = @ai_ship_types_factor
+	# }
+# }
 
 tech_Carrier_1 = {
 	cost = @tier4cost1
@@ -500,10 +500,6 @@ tech_explorationship_1 = {
 	category = { voidcraft }
 	prerequisites = { "tech_destroyers" }
 	weight = 90
-
-	potential = {
-		country_uses_bio_ships = no
-	}
 	
 	gateway = ship
 
@@ -533,10 +529,6 @@ tech_explorationship_2 = {
 	category = { voidcraft }
 	prerequisites = { "tech_explorationship_1" "tech_cruisers" }
 	weight = 80
-
-	potential = {
-		country_uses_bio_ships = no
-	}
 	
 	gateway = ship
 
@@ -575,10 +567,6 @@ tech_explorationship_3 = {
 	category = { voidcraft }
 	prerequisites = { "tech_explorationship_2" "tech_battleships" }
 	weight = 60
-
-	potential = {
-		country_uses_bio_ships = no
-	}
 	
 	gateway = ship
 
@@ -612,10 +600,6 @@ tech_explorationship_4 = {
 	category = { voidcraft }
 	prerequisites = { "tech_explorationship_3" "tech_Dreadnought_1" }
 	weight = 60
-
-	potential = {
-		country_uses_bio_ships = no
-	}
 	
 	gateway = ship
 
@@ -909,6 +893,11 @@ tech_graviton_power = {
 			desc = "TECH_UNLOCK_GRAVITON_POWER_DESC"
 		}
 	}
+	
+	potential = {
+		country_uses_bio_ships = no
+	}
+	
 	weight_modifier = {
 		factor = 1.5
 		modifier = {
@@ -943,6 +932,10 @@ tech_naquadria_power = {
 			title = "TECH_UNLOCK_NAQUADRIA_POWER_TITLE"
 			desc = "TECH_UNLOCK_NAQUADRIA_POWER_DESC"
 		}
+	}
+	
+	potential = {
+		country_uses_bio_ships = no
 	}
 	
 	weight_modifier = {
@@ -981,6 +974,10 @@ tech_singularity_power = {
 		}
 	}
 	
+	potential = {
+		country_uses_bio_ships = no
+	}
+	
 	weight_modifier = {
 		factor = 1.5
 		modifier = {
@@ -1015,6 +1012,10 @@ tech_multidimensional_power = {
 			title = "TECH_UNLOCK_MULTIDIMENSIONAL_POWER_TITLE"
 			desc = "TECH_UNLOCK_MULTIDIMENSIONAL_POWER_DESC"
 		}
+	}
+	
+	potential = {
+		country_uses_bio_ships = no
 	}
 	
 	weight_modifier = {
@@ -1054,6 +1055,10 @@ tech_optimized_enigmatic_power = {
 		}
 	}
 	
+	potential = {
+		country_uses_bio_ships = no
+	}
+	
 	weight_modifier = {
 		factor = 1.5
 		modifier = {
@@ -1091,6 +1096,10 @@ tech_bh_power_2 = {
 		}
 	}
 	
+	potential = {
+		country_uses_bio_ships = no
+	}
+	
 	weight_modifier = {
 		factor = 1.5
 		modifier = {
@@ -1126,6 +1135,10 @@ tech_bh_power_3 = {
 			title = "TECH_UNLOCK_BH_POWER_TITLE"
 			desc = "TECH_UNLOCK_BH_POWER_DESC"
 		}
+	}
+	
+	potential = {
+		country_uses_bio_ships = no
 	}
 	
 	weight_modifier = {
@@ -1726,13 +1739,6 @@ tech_defense_platforms_4 = {
 
 
 
-
-####################################################################################################################################################################
-### UPKEEP REDUCTION ###############################################################################################################################################
-####################################################################################################################################################################
-
-
-
 ####################################################################################################################################################################
 ### HYPERLANE MANIPULATION #########################################################################################################################################
 ####################################################################################################################################################################
@@ -1912,6 +1918,10 @@ tech_galactic_mall = {
 	category = { statecraft }
 	prerequisites = { "tech_mega_engineering" }
 	weight = @tier5weight3
+
+	potential = {
+		is_nomadic = no
+	}
 	
 	prereqfor_desc = {
 		ship = {
@@ -1943,6 +1953,10 @@ tech_hospital = {
 	category = { biology }
 	prerequisites = { "tech_mega_engineering" }
 	weight = @tier5weight3
+
+	potential = {
+		is_nomadic = no
+	}
 	
 	prereqfor_desc = {
 		ship = {
